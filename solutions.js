@@ -201,3 +201,18 @@
 //   }
 
 //   solution(10);
+
+// function firstReverseTry(arr) {
+//     var first = arr[0];
+//     var last = arr[arr.length - 1];
+
+//   if (arr.length){
+//     arr.splice(0, 1, last);
+//     arr.splice(arr.length -1, 1,first);
+//   } else {
+//     arr = []
+//   }
+//     return arr;
+//   }
+
+//   firstReverseTry([])
