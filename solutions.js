@@ -270,3 +270,14 @@ function removeSmallest(numbers) {
 }
 
 removeSmallest([2, 3, 4, 5]);
+
+function rakeGarden(garden) {
+  var rakedGarden = garden.split(" ");
+  console.log(rakedGarden.length);
+  for (var i = 0; i < rakedGarden.length; i++) {
+    if (rakedGarden[i] != "rock" && "gravel") {
+      rakedGarden[i] = "gravel";
+    }
+  }
+  return rakedGarden.join(" ");
+}
