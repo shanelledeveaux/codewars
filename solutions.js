@@ -216,3 +216,17 @@
 //   }
 
 //   firstReverseTry([])
+
+function inAscOrder(arr) {
+  for (i = 1; i < arr.length; i++) {
+    prevNum = arr[i - 1];
+    console.log(prevNum);
+    if (arr[i] < prevNum) {
+      return false;
+    }
+  }
+  return true;
+}
+
+inAscOrder([1, 6, 10, 18, 2, 4, 20]);
+inAscOrder([1, 2, 3, 4, 5]);
