@@ -230,3 +230,16 @@ function inAscOrder(arr) {
 
 inAscOrder([1, 6, 10, 18, 2, 4, 20]);
 inAscOrder([1, 2, 3, 4, 5]);
+
+function superSize(num) {
+  return parseInt(
+    (num + "")
+      .split("")
+      .sort(function(a, b) {
+        return b - a;
+      })
+      .join("")
+  );
+}
+
+superSize(123456);
