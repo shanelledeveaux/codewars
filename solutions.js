@@ -261,3 +261,12 @@ function fizzbuzz(n) {
 }
 
 fizzbuzz(20);
+
+function removeSmallest(numbers) {
+  var newArr = numbers.slice();
+  var smallestNum = Math.min.apply(null, newArr);
+  newArr.splice(newArr.indexOf(smallestNum), 1);
+  return newArr;
+}
+
+removeSmallest([2, 3, 4, 5]);
