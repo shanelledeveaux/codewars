@@ -282,19 +282,22 @@ function rakeGarden(garden) {
   return rakedGarden.join(" ");
 }
 
-function swap(array, i, j) {
-  var temp = array[i];
-  array[i] = array[j];
-  array[j] = temp;
+function swap(tempArr, i, j) {
+  var temp = tempArr[i];
+  tempArr[i] = tempArr[j];
+  tempArr[j] = temp;
 }
 
 function bubblesortOnce(array) {
-  for (var i = 0; i < array.length; i++) {
-    for (var j = 1; j < array.length; j++) {
-      if (array[j - 1] > array[j]) {
-        swap(array, j - 1, j);
+  var tempArr = array;
+  for (var i = 0; i < 1; i++) {
+    for (var j = 1; j < tempArr.length; j++) {
+      if (tempArr[j - 1] > tempArr[j]) {
+        swap(tempArr, j - 1, j);
       }
     }
   }
-  return array;
+  return tempArr;
 }
+
+bubblesortOnce([9, 2, 5, 6, 4, 3, 7, 10, 1, 8]);
