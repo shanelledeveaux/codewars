@@ -301,3 +301,16 @@ function bubblesortOnce(array) {
 }
 
 bubblesortOnce([9, 2, 5, 6, 4, 3, 7, 10, 1, 8]);
+
+function pigIt(str) {
+  var pig = str.split(" ");
+  for (i = 0; i < pig.length; i++) {
+    if (pig[i] == "!" || pig[i] == "?") {
+      pig[i];
+    } else {
+      var firstLetter = pig[i].charAt(0);
+      pig[i] = pig[i].substr(1).concat(firstLetter + "ay");
+    }
+  }
+  return pig.join(" ");
+}
