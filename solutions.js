@@ -321,3 +321,11 @@ function countDevelopers(list) {
     .filter(jsDevs => jsDevs.continent == "Europe");
   return finalList.length;
 }
+
+function songDecoder(song) {
+  return song
+    .replace(/WUB/g, " ")
+    .split(" ")
+    .filter(str => str != "")
+    .join(" ");
+}
