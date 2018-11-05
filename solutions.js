@@ -314,3 +314,10 @@ function pigIt(str) {
   }
   return pig.join(" ");
 }
+
+function countDevelopers(list) {
+  var finalList = list
+    .filter(devs => devs.language == "JavaScript")
+    .filter(jsDevs => jsDevs.continent == "Europe");
+  return finalList.length;
+}
