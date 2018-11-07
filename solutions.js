@@ -329,3 +329,20 @@ function songDecoder(song) {
     .filter(str => str != "")
     .join(" ");
 }
+
+function cakes(recipe, available) {
+  if (Object.keys(available).length === 0) return 0;
+  var portions = [];
+  for (var property in recipe) {
+    for (var property2 in available) {
+      if (available.hasOwnProperty(property) == true && property == property2) {
+        let amount = available[property2] / recipe[property];
+        portions.push(amount);
+      } else if (available.hasOwnProperty(property) == false) {
+        return 0;
+      }
+    }
+  }
+  var smallest = Math.floor(Math.min.apply(null, portions));
+  return smallest;
+}
