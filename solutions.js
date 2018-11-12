@@ -346,3 +346,28 @@ function cakes(recipe, available) {
   var smallest = Math.floor(Math.min.apply(null, portions));
   return smallest;
 }
+
+function duplicateCount(text) {
+  var text = text.toLowerCase().split("");
+  let count = 0;
+  let duplicates = [];
+
+  for (i = 0; i < text.length; i++) {
+    if (
+      text
+        .join("")
+        .slice(1)
+        .includes(text[0])
+    ) {
+      duplicates.push(text[0]);
+      text = text.filter(letter => letter !== text[0]);
+      i = 0;
+    } else {
+      text = text.filter(letter => letter !== text[0]);
+      i = 0;
+    }
+  }
+  return duplicates.length;
+}
+
+duplicateCount("Indivisibilities");
