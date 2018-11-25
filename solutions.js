@@ -349,7 +349,6 @@ function cakes(recipe, available) {
 
 function duplicateCount(text) {
   var text = text.toLowerCase().split("");
-  let count = 0;
   let duplicates = [];
 
   for (i = 0; i < text.length; i++) {
@@ -371,3 +370,15 @@ function duplicateCount(text) {
 }
 
 duplicateCount("Indivisibilities");
+
+function generateMenu(menuItems) {
+  var outputString = "";
+  for (var i = 0; i < menuItems.length; i++) {
+    var anchorString =
+      '<a href="' + menuItems[i].url + '">' + menuItems[i].text + "</a>";
+    outputString += anchorString;
+  }
+  return outputString;
+}
+
+generateMenu(inputs.slice(0, 1));
