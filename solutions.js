@@ -396,3 +396,20 @@ function iccanobif(n) {
 }
 
 iccanobif(9);
+
+function selReverse(array, length) {
+  var smlArr = [];
+  var final = [];
+
+  if (length === 0) return array;
+
+  while (array.length) {
+    smlArr.push(array.splice(0, length));
+  }
+  smlArr.map(function(e, i) {
+    e.reverse();
+    final.push(...e);
+  });
+
+  return final;
+}
