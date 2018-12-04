@@ -382,3 +382,15 @@ function generateMenu(menuItems) {
 }
 
 generateMenu(inputs.slice(0, 1));
+
+function iccanobif(n) {
+  var arr = [1, 1];
+
+  for (let i = 0; i < n - 2; i++) {
+    var num = arr[i] + arr[i + 1];
+    arr.push(num);
+  }
+  return arr.reverse();
+}
+
+iccanobif(9);
