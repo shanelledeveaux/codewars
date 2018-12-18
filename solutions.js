@@ -406,10 +406,27 @@ function selReverse(array, length) {
   while (array.length) {
     smlArr.push(array.splice(0, length));
   }
-  smlArr.map(function(e, i) {
+  smlArr.map(function(e) {
     e.reverse();
     final.push(...e);
   });
 
   return final;
 }
+
+function humanReadable(seconds) {
+  var hours = formatter(Math.floor(seconds / 60 / 60));
+  var minutes = formatter(Math.floor((seconds % 3600) / 60));
+  var seconds = formatter(Math.floor(seconds - hours * 60 * 60 - minutes * 60));
+
+  return `${hours}:${minutes}:${seconds}`;
+}
+
+function formatter(time) {
+  if (("" + time).length < 2) {
+    return "0" + time;
+  }
+  return time;
+}
+
+humanReadable(86399);
