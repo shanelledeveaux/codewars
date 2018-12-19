@@ -429,4 +429,25 @@ function formatter(time) {
   return time;
 }
 
+//something wrong here
+
+function incrementString(str) {
+  if (/\d/.test(str)) {
+    for (var i = 0; i < str.length; i++) {
+      if (/\d/.test(str[i])) {
+        var letters = str.slice(0, i);
+        var numbers = str.slice(i);
+        var extraNumbers = numbers.slice(0, numbers.length - 2);
+        var increment = numbers.slice(numbers.length - 2);
+        increment++;
+        return letters + extraNumbers + increment;
+      }
+    }
+  } else {
+    return str + "1";
+  }
+}
+
+incrementString("foobar099");
+
 humanReadable(86399);
